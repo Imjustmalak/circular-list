@@ -16,9 +16,10 @@ struct node *create_node() {
 
 void add_node(struct node **head) {
     struct node *new_node = create_node();
-    new_node->next = *head;
+    
     if (*head == NULL) {
         *head = new_node;
+        new_node->next = *head;
        
     } else {
         struct node *ptr = *head;
