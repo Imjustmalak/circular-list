@@ -36,11 +36,11 @@ void display(struct node *head) {
         printf("the list is empty");
         return;
     }
-    struct node *temp = head;
+    struct node *q= head;
     do {
-        printf("%d, ", temp->data);
-        temp = temp->next;
-    } while (temp != head);
+        printf("%d, ",q->data);
+        q = q->next;
+    } while (q != head);
 }
 
 int main() {
