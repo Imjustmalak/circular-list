@@ -51,7 +51,7 @@ int main() {
     for (int j = 0; j < n; j++) {
         add_node(&head);
     }
-    printf("your list'scontent is : \n ");
+    printf("your list's content is : \n ");
     display(head);
  
 }
