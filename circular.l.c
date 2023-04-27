@@ -13,8 +13,8 @@ struct node* create_node(int data) {
     return new_node;
 }
 
-void add_node(struct node** head, int data) {
-    struct node* new_node = create_node(data);
+void add_node(struct node** head) {
+    struct node* new_node = create_node();
 
     if (*head == NULL) {
         *head = new_node;
@@ -31,7 +31,7 @@ void add_node(struct node** head, int data) {
 
 void display(struct node* head) {
     if (head == NULL) {
-        printf("Empty list!\n");
+        printf("Empty list");
         return;
     }
     
@@ -48,10 +48,10 @@ int main() {
     struct node* head = NULL;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
-    for (int j = 0; j < n; j++) {
-        printf("Enter data for node %d: ", j + 1);
+    for (int j = 0; j < n;j++ ) {
+        printf("Enter data for node %d: ",j+1);
         scanf("%d", &data);
-        add_node(&head, data);
+        add_node(&head);
     }
     printf("Circular linked list contents: ");
     display(head);
