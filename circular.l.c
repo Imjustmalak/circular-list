@@ -18,14 +18,14 @@ void add_node(struct node** head, int data) {
 
     if (*head == NULL) {
         *head = new_node;
-        (*head)->next = *head; // point back to head to make it circular
+        (*head)->next = *head; 
     } else {
         struct node* p = *head;
         while (p->next != *head) {
             p = p->next;
         }
         p->next = new_node;
-        new_node->next = *head; // point back to head to make it circular
+        new_node->next = *head; 
     }
 }
 
