@@ -19,7 +19,7 @@ void add_node(struct node **head) {
     new_node->next = *head;
     if (*head == NULL) {
         *head = new_node;
-        new_node->next = *head;
+       
     } else {
         struct node *ptr = *head;
         while (ptr->next != *head) {
