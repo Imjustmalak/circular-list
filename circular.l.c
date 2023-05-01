@@ -16,31 +16,36 @@ struct node *create_node() {
 
 void add_node(struct node **head) {
     struct node *new_node = create_node();
-    
     if (*head == NULL) {
         *head = new_node;
-       
-       
     } else {
         struct node *ptr = *head;
         while (ptr->next != *head) {
             ptr = ptr->next;
         }
         ptr->next = new_node;
-        new_node->next = *head;
     }
+    new_node->next = *head;
 }
+
+
+
+            
+            
+
+
+
 
 void display(struct node *head) {
     if (head == NULL) {
         printf("the list is empty");
         return;
     }
-    struct node *q= head;
+    struct node *temp = head;
     do {
-        printf("%d, ",q->data);
-        q = q->next;
-    } while (q != head);
+        printf("%d, ", temp->data);
+        temp = temp->next;
+    } while (temp != head);
 }
 
 int main() {
@@ -51,7 +56,7 @@ int main() {
     for (int j = 0; j < n; j++) {
         add_node(&head);
     }
-    printf("your list's content is : \n ");
+    printf("Circular linked list contents: ");
     display(head);
- 
+   
 }
