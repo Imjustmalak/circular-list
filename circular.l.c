@@ -56,7 +56,7 @@ int main() {
     for (int j = 0; j < n; j++) {
         add_node(&head);
     }
-    printf("Circular linked list contents: ");
+    printf("your linked list contents: ");
     display(head);
    
 }
